@@ -74,8 +74,8 @@
           <p>Allows inquiring past rates, to determine trends.</p>
        </div>
         <div class="col-md-4">
-          <h2><i class="fa fa-user"></i>Personalize</h2>
-          <p>Follow the trends for the currencies you're interested in.</p>
+          <h2><i class="fa fa-user"></i>Personal</h2>
+          <p>Easily follow the currencies you're interested in.</p>
         </div>
       </div>
 
