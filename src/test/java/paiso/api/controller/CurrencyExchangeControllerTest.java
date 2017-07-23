@@ -99,7 +99,7 @@ public class CurrencyExchangeControllerTest {
 
 	@Test
 	public void shouldReturnBadRequestErrorForFutureDate() throws Exception {
-		ZonedDateTime tomorrow = ZonedDateTime.of(LocalDateTime.now().plusDays(1), ZoneId.systemDefault());
+		ZonedDateTime tomorrow = ZonedDateTime.of(LocalDateTime.now().plusDays(2), ZoneId.systemDefault());
 		String tomorrowUtcStr = tomorrow.withZoneSameInstant(ZoneOffset.UTC).toLocalDate().format(DateTimeFormatter.ISO_LOCAL_DATE);
 		
 		mockMvc.perform(get("/exchange/" + tomorrowUtcStr + "/USD"))
