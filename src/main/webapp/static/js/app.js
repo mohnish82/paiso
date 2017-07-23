@@ -46,10 +46,11 @@ const paiso = {
 	},
 	
 	findExchangeRate: function(currencyCode) {
-		const dateStr = $('.datepicker').val();
-		const utcDateStr = moment(dateStr, 'YYYY-MM-DD').utc().format('YYYY-MM-DD');
-		const ratesUrl = effectiveDate
-							? `${paiso.ratesApiUrl}/${effectiveDate}/${currencyCode}`
+		let dateStr = $('.datepicker').val();
+		if(dateStr) dateStr = moment(dateStr, 'YYYY-MM-DD').utc().format('YYYY-MM-DD');
+		
+		const ratesUrl = dateStr
+							? `${paiso.ratesApiUrl}/${dateStr}/${currencyCode}`
 							: `${paiso.ratesApiUrl}/${currencyCode}`;
 		
 		return fetch(ratesUrl, {
