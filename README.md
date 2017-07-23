@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mohnish82/paiso.svg?branch=master)](https://travis-ci.org/mohnish82/paiso)
+
 # Paiso  
 
 Application to provide current and historic exchange rate(s) for some of the popular world currencies. Uses currency exchange rate data by [OpenExchangeRates](https://openexchangerates.org/).
