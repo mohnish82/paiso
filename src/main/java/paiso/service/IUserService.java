@@ -15,6 +15,6 @@ public interface IUserService {
 	User findUser(User user);
 	User saveUser(User user);
 	
-	List<RateInquiry> getRecentInquiries();
+	List<RateInquiry> getRecentInquiries(User user);
 	RateInquiry saveUserRateInquiry(RateInquiry inquiry);
 }

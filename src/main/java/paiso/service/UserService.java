@@ -46,7 +46,7 @@ public class UserService implements IUserService {
 		return rateInquiryRepo.save(inquiry);
 	}
 	
-	public List<RateInquiry> getRecentInquiries() {
-		return rateInquiryRepo.findTop10ByOrderByIdDesc();
+	public List<RateInquiry> getRecentInquiries(User user) {
+		return rateInquiryRepo.findTop10ByUserIdOrderByIdDesc(user.getId());
 	}
 }

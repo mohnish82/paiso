@@ -11,4 +11,6 @@ import paiso.model.RateInquiry;
 public interface IRateInquiryRepository extends CrudRepository<RateInquiry, Long> {
 	
 	public List<RateInquiry> findTop10ByOrderByIdDesc();
+	public List<RateInquiry> findTop10ByUserIdOrderByIdDesc(Long userId);
+
 }

@@ -30,6 +30,6 @@ public class UserInquiryController extends BaseController {
 		if(user == null)
 			throw new UserNotFoundException("No user found");
 		
-		return userService.getRecentInquiries();
+		return userService.getRecentInquiries(user);
 	}
 }

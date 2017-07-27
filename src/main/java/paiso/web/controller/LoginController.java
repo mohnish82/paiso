@@ -37,7 +37,7 @@ public class LoginController {
 			return "redirect:/";
 		
 		userProfile.setUser(user);
-		userProfile.addRecentInquiries(userService.getRecentInquiries());
+		userProfile.addRecentInquiries(userService.getRecentInquiries(user));
 
 		model.addAttribute("user", user);
 		
